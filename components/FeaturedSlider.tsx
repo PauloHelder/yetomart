@@ -33,7 +33,7 @@ const FeaturedSlider: React.FC = () => {
   }, [current]);
 
   return (
-    <div className="relative w-full h-[500px] md:h-[700px] bg-black overflow-hidden rounded-lg group shadow-2xl border border-white/5">
+    <div className="relative w-full h-[500px] md:h-[700px] bg-black overflow-hidden group shadow-2xl">
       {featured.map((item, index) => (
         <div 
           key={item.id}

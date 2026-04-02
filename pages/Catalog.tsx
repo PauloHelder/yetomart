@@ -24,16 +24,17 @@ const Catalog: React.FC = () => {
   }, [filter, searchQuery]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
-      {/* Esconde o slider se estiver pesquisando algo específico */}
+    <div className="w-full pb-20">
+      {/* Hero Section - 100% Width */}
       {!searchQuery && (
-        <section className="mb-12">
+        <section className="w-full">
           <FeaturedSlider />
         </section>
       )}
 
-      <section className="mb-12">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <section className="mb-12">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
           <div>
             {searchQuery ? (
               <h2 className="text-2xl font-bold text-white mb-2 font-serif italic">
@@ -105,6 +106,7 @@ const Catalog: React.FC = () => {
       )}
 
       <Offcanvas product={quickViewProduct} onClose={() => setQuickViewProduct(null)} />
+      </div>
     </div>
   );
 };
